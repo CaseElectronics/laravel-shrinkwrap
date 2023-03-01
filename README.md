@@ -22,6 +22,13 @@ Add the `\ZEM\Shrinkwrap\Addressable` trait to models you would like to have
     'item1' => $myModel,
     'item2' => $myModel,
 ]));
+
+// Or using the built-in macro:
+
+collect([
+    'item1' => $myModel,
+    'item2' => $myModel,
+])->shrink();
 ```
 
 If you have instances of addressable models at "deep" paths within your data,
