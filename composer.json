@@ -10,7 +10,6 @@
     },
     "require-dev": {
         "pestphp/pest": "^1.20",
-        "laravel/pint": "^1.2",
         "spatie/ray": "^1.28"
     },
     "autoload": {
@@ -25,8 +24,7 @@
     },
     "scripts": {
         "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
         "sort-packages": true,
