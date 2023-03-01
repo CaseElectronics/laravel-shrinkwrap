@@ -33,6 +33,13 @@
             "phpstan/extension-installer": true
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ZEM\\Shrinkwrap\\ShrinkwrapServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
