@@ -54,7 +54,7 @@ class Facility
      * string values that start with an asterisk (which indicates an "address" / pointer)
      * with the corresponding value from the dictionary.
      */
-    public static function unshrink (mixed $item, ?array $dict = null): array
+    public static function unshrink (mixed $item, ?array $dict = null): mixed
     {
         if (is_array($item)) {
             if (
