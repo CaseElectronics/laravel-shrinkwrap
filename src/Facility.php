@@ -66,8 +66,13 @@ class Facility
             } else {
                 return array_map(fn($item) => self::unshrink($item, $dict), $item);
             }
-        } else if (is_string($item) && str_starts_with($item, '*')) {
-            return $dict[$item] ?? $item;
+        } else if (
+            is_string($item)
+            && str_starts_with($item, '*')
+            && $dict !== null
+            && array_key_exists($item, $dict)
+        ) {
+            return self::unshrink($dict[$item], $dict);
         } else {
             return $item;
         }
