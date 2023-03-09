@@ -40,8 +40,6 @@ trait Addressable
 
     public function getAddress (): string
     {
-        return '*' . get_class($this)
-            . ':' . $this->getKey()
-            . '#' . $this->getConfigHash();
+        return Address::create(get_class($this), $this->getKey(), $this->getConfigHash());
     }
 }
